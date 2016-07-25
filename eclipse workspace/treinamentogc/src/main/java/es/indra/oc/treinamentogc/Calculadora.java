@@ -33,4 +33,28 @@ public class Calculadora {
 		result.setOutput(resultado);
 		return result;
 	}
+	
+	@GET
+	@Path("multiplicacao")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Result multiplicacao(@QueryParam("entrada1") double input1, @QueryParam("entrada2") double input2){
+		Result result = new Result("Multiplicacao");
+		result.setInput1(input1);
+		result.setInput2(input2);
+		resultado = result.multiplicar(input1, input2);
+		result.setOutput(resultado);
+		return result;
+	}
+	
+	@GET
+	@Path("divisao")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Result divisao(@QueryParam("entrada1") double input1, @QueryParam("entrada2") double input2){
+		Result result = new Result("Divisao");
+		result.setInput1(input1);
+		result.setInput2(input2);
+		resultado = result.dividir(input1, input2);
+		result.setOutput(resultado);
+		return result;
+	}
 }

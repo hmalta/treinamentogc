@@ -17,6 +17,16 @@ public class Result {
 		return resultado;
 	}
 	
+	public double multiplicar(double input1, double input2){
+		resultado  = input1*input2;
+		return resultado;
+	}
+	
+	public double dividir(double input1, double input2){
+		resultado  = input1/input2;
+		return resultado;
+	}
+	
 	public Result(){
 		
 	}
