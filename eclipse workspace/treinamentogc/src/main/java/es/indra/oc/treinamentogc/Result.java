@@ -27,6 +27,11 @@ public class Result {
 		return resultado;
 	}
 	
+	public double raiz(double input1){
+		resultado = Math.sqrt(input1);
+		return resultado;
+	}
+	
 	public Result(){
 		
 	}
