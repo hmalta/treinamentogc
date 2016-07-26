@@ -5,6 +5,7 @@ public class Result {
 	double input2;
 	double output;
 	double resultado;
+	double x;
 	String action;
 	
 	public double somar(double input1, double input2){
@@ -29,6 +30,16 @@ public class Result {
 	
 	public double raiz(double input1){
 		resultado = Math.sqrt(input1);
+		return resultado;
+	}
+	
+	public double fatorial(double input1){
+		resultado = input1;
+		x = input1;
+		while (x>1){
+			resultado = resultado*(x-1);
+			x--;
+		}
 		return resultado;
 	}
 	

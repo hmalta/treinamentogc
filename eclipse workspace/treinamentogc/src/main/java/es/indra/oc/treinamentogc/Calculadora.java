@@ -9,7 +9,6 @@ import javax.ws.rs.core.MediaType;
 @Path("calculadora")
 public class Calculadora {
 	double resultado;
-	String msgSaida;
 	
 	@GET
 	@Path("soma")
@@ -66,6 +65,17 @@ public class Calculadora {
 		Result result = new Result("Raiz Quadrada");
 		result.setInput1(input1);
 		resultado = result.raiz(input1);
+		result.setOutput(resultado);
+		return result;
+	}
+	
+	@GET
+	@Path("fatorial")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Result fatorial(@QueryParam("entrada1") double input1){
+		Result result = new Result("Fatorial");
+		result.setInput1(input1);
+		resultado = result.fatorial(input1);
 		result.setOutput(resultado);
 		return result;
 	}
